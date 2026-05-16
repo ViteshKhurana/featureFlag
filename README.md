@@ -19,7 +19,7 @@ It helps teams safely release features, run experiments, and control behavior in
 ## ⚙️ Tech Stack
 
 - **FastAPI** — API framework  
-- **SQLite / PostgreSQL** — Database  
+- **MongoDB** — Database  
 - **Redis (optional)** — Caching for fast flag evaluation  
 
 ---
