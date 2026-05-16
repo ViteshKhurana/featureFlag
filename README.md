@@ -1,4 +1,4 @@
-# 🚀 Feature Flag Service (FastAPI)
+# 🚀 Feature Flag Service
 
 A lightweight and scalable **Feature Flag system** built with FastAPI to control feature rollouts dynamically without redeploying applications.
 
