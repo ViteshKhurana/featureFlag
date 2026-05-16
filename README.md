@@ -43,7 +43,7 @@ POST /features
 PATCH /features/{id}
 
 ### ➤ Check Feature for User
-GET /features/{name}/check?user_id=123
+GET /features/{name}/check?user_id=$id
 
 ---
 
