@@ -17,7 +17,7 @@ class updateFeatureSchema(BaseModel):
     description: Optional[str] = None
     is_enabled: Optional[bool] = None
     rollout_percentage: Optional[int] = Field(
-        default=0,
+        default=None,
         ge=0,
         le=100
     )
