@@ -1,7 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from database.conn import connection_db, close_db
 from contextlib import asynccontextmanager
 from routes import all_routers
+from database.indexes import create_indexes
 import os
 
 MONGO_URI = os.getenv("MONGO_URI")
@@ -10,6 +11,8 @@ DB_NAME = os.getenv("DB_NAME")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await connection_db(app)
+    db = app.state.db
+    await create_indexes(db)
     yield
     await close_db(app)
 
